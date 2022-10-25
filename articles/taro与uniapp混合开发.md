@@ -6,9 +6,8 @@
 |-- my-taro
     |-- config
         |-- index.js
-    |-- dist
-        |-- alipay(打包后的文件内容)
-            |-- common.acss
+    |-- dist(打包后的文件内容)
+        |-- common.acss
     |-- plugin-mv
         |-- index.js  
     |-- src
@@ -70,7 +69,7 @@ export default (ctx, options) => {
 
     const rootPath = path.resolve(__dirname, '../..');
     const miniappPath = path.join(rootPath, 'my-uniapp/dist/build/mp-alipay');
-    const outputPath = path.resolve(__dirname, '../dist/alipay');
+    const outputPath = path.resolve(__dirname, '../dist');
     const destPath = path.join(miniappPath, 'taro');
 
     if (fs.existsSync(destPath)) {
@@ -281,7 +280,7 @@ export default (ctx, options) => {
 
     const rootPath = path.resolve(__dirname, '../..');
     const miniappPath = path.join(rootPath, 'my-uniapp/dist/build/mp-alipay');
-    const outputPath = path.resolve(__dirname, '../dist/alipay');
+    const outputPath = path.resolve(__dirname, '../dist');
     const destPath = path.join(miniappPath, 'taro');
 
     if (fs.existsSync(destPath)) {
